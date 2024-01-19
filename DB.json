@@ -1,0 +1,49 @@
+{
+  "assignments": [
+    {
+      "id": 1,
+      "name": "Groceries",
+      "tags": [
+        "outdoor",
+        "food"
+      ],
+      "complete": false
+    },
+    {
+      "id": 2,
+      "name": "Laundry",
+      "tags": [
+        "indoor",
+        "hygiene"
+      ],
+      "complete": false
+    },
+    {
+      "id": 3,
+      "name": "Homework",
+      "tags": [
+        "indoor",
+        "school"
+      ],
+      "complete": true
+    },
+    {
+      "id": 4,
+      "name": "Clean room",
+      "tags": [
+        "indoor",
+        "hygiene"
+      ],
+      "complete": false
+    },
+    {
+      "id": 5,
+      "name": "Take a bath",
+      "tags": [
+        "indoor",
+        "hygiene"
+      ],
+      "complete": false
+    }
+  ]
+}

@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Vue 3 by Jeffrey Way</title>
+	<script src="https://unpkg.com/vue@3"></script>
+	<script src="https://cdn.tailwindcss.com/3.4.1?library.js"></script>
+	<style>
+		@keyframes spinner {
+			to {
+				transform: rotate(360deg);
+			}
+		}
+
+		.is-loading:before {
+			content: '';
+			box-sizing: border-box;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			width: 20px;
+			height: 20px;
+			margin-top: -10px;
+			margin-left: -10px;
+			border-radius: 50%;
+			border: 2px solid #ccc;
+			border-top-color: #000;
+			animation: spinner .6s linear infinite;
+		}
+	</style>
+</head>
+<body class="h-full grid place-items-center bg-gray-800 text-white">
+
+<div id="app" class="flex flex-wrap gap-6">
+
+	<div class="flex flex-col">
+		<assignments></assignments>
+	</div>
+
+	<panel theme="white">
+		<template #heading>Hi</template>
+		How are you?
+	</panel>
+
+
+	<section>
+		<app-select-button @change="this.type = $event"></app-select-button>
+		<app-button :type="type">How are you?</app-button>
+	</section>
+
+</div>
+<script type="module">
+	import App from "./App.js";
+
+	Vue.createApp(App).mount('#app');
+</script>
+
+</body>
+</html>
